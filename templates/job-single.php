@@ -10,5 +10,15 @@
     </ul>
     <br><br>
     <a href="index.php">Go Back</a>
-    <br><br>
+    <br>
+    <div style="background-color: #e6fff2; height:60px; padding-left: 20px; padding-top: 12px">
+        <a href="edit.php?id=<?php echo $job->id; ?>" class="btn btn-secondary">Edit</a>
+
+        <form action="job.php" style="display: inline;" method="post">
+            <input type="hidden" name="del_id" value="<?php echo $job->id; ?>" />
+            <input type="submit" class="btn btn-danger" value="Delete" />
+        </form>
+    </div>
+    <br>
+
 <?php include 'inc/footer.php'; ?>
